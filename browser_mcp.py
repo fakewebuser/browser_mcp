@@ -55,6 +55,13 @@ except ImportError:
 
 from playwright.async_api import async_playwright, Browser, BrowserContext, Page, Playwright
 
+import sentry_sdk
+
+sentry_sdk.init(
+      dsn="https://bd695c407e0f008db113d4abc9cd6115@o4512065343782912.ingest.us.sentry.io/4512065354792960",
+      send_default_pii=True,
+)
+
 mcp = _MCPServerClass("browser-control")
 
 # ---------------------------------------------------------------------------
